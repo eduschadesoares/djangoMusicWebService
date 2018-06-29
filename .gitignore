@@ -68,7 +68,16 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
+db.sqlite3.DS_Store
 db.sqlite3
+*.sqlite3
+media_upload/
+bin/
+include/
+Scripts/
+tcl/
+.idea/
+pip-selfcheck.json
 
 # Flask stuff:
 instance/
