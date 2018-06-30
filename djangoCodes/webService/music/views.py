@@ -24,8 +24,8 @@ from .models import (Music,
 class MusicList(generics.ListCreateAPIView):
     queryset = Music.objects.all()
     serializer_class = MusicSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    # authentication_classes = [OAuth2Authentication, SessionAuthentication]
+    # permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -33,53 +33,53 @@ class MusicList(generics.ListCreateAPIView):
 class MusicDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Music.objects.all()
     serializer_class = MusicSerializer
-    authentication_classes = [SessionAuthentication]
-    permission_classes = (IsAuthenticated, )
+    # authentication_classes = [SessionAuthentication]
+    # permission_classes = (IsAuthenticated, )
 
 class BandList(generics.ListCreateAPIView):
     queryset = Band.objects.all()
     serializer_class = BandSerializer
-    authentication_classes = [SessionAuthentication]
-    permission_classes = (IsAuthenticated, )
+    # authentication_classes = [SessionAuthentication]
+    # permission_classes = (IsAuthenticated, )
 
 class BandDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Band.objects.all()
     serializer_class = BandSerializer
-    authentication_classes = [SessionAuthentication]
-    permission_classes = (IsAuthenticated, )
+    # authentication_classes = [SessionAuthentication]
+    # permission_classes = (IsAuthenticated, )
 
 class RecordList(generics.ListCreateAPIView):
     queryset = Record.objects.all()
     serializer_class = RecordSerializer
-    authentication_classes = [SessionAuthentication]
-    permission_classes = (IsAuthenticated, )
+    # authentication_classes = [SessionAuthentication]
+    # permission_classes = (IsAuthenticated, )
 
 class RecordDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Record.objects.all()
     serializer_class = RecordSerializer
-    authentication_classes = [SessionAuthentication]
-    permission_classes = (IsAuthenticated, )
+    # authentication_classes = [SessionAuthentication]
+    # permission_classes = (IsAuthenticated, )
 
 class GenreList(generics.ListCreateAPIView):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
-    authentication_classes = [SessionAuthentication]
-    permission_classes = (IsAuthenticated, )
+    # authentication_classes = [SessionAuthentication]
+    # permission_classes = (IsAuthenticated, )
 
 class GenreDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
-    authentication_classes = [SessionAuthentication]
-    permission_classes = (IsAuthenticated, )
+    # authentication_classes = [SessionAuthentication]
+    # permission_classes = (IsAuthenticated, )
 
 class PlaylistList(generics.ListCreateAPIView):
     queryset = Playlist.objects.all()
     serializer_class = PlaylistSerializer
-    authentication_classes = [SessionAuthentication]
-    permission_classes = (IsAuthenticated, )
+    # authentication_classes = [SessionAuthentication]
+    # permission_classes = (IsAuthenticated, )
 
 class PlaylistDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Playlist.objects.all()
     serializer_class = PlaylistSerializer
-    authentication_classes = [SessionAuthentication]
-    permission_classes = (IsAuthenticated, )
+    # authentication_classes = [SessionAuthentication]
+    # permission_classes = (IsAuthenticated, )
