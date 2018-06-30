@@ -90,5 +90,7 @@ class PlaylistDetail(generics.RetrieveUpdateDestroyAPIView):
 
 def status(request):
     status = {'status': 'OK'}
+
     data = json.dumps(status)
+
     return HttpResponse(data)

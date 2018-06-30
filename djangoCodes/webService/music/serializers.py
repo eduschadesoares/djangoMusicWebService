@@ -5,6 +5,7 @@ from .models import (Music,
                      Genre,
                      Playlist,
                      )
+import json
 
 class MusicSerializer(serializers.ModelSerializer):
     class Meta:
@@ -30,4 +31,3 @@ class PlaylistSerializer(serializers.ModelSerializer):
     class Meta:
         model = Playlist
         fields = '__all__'
-
