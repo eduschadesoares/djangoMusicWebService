@@ -5,6 +5,10 @@ from rest_condition import Or
 from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope, OAuth2Authentication
 from rest_framework.authentication import SessionAuthentication
 
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
+
+import json
 
 from rest_framework import generics
 from .serializers import (MusicSerializer,
@@ -83,3 +87,8 @@ class PlaylistDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PlaylistSerializer
     # authentication_classes = [SessionAuthentication]
     # permission_classes = (IsAuthenticated, )
+
+def status(request):
+    status = {'status': 'OK'}
+    data = json.dumps(status)
+    return HttpResponse(data)

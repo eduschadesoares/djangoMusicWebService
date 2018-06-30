@@ -1,10 +1,13 @@
 from django.conf.urls import url
 from . import views
 
+from .views import status
 
 app_name = 'music'
 
 urlpatterns = [
+    url(r'^status/', status, name='status'),
+
     url(r'^musics/$', views.MusicList.as_view(), name='music-list'),
     url(r'^music/(?P<pk>[0-9]+)/$', views.MusicDetail.as_view(), name='music-detail'),
 
